@@ -377,10 +377,12 @@ const App = () => {
                 A creative digital storytelling toolkit for Year 6 — built in collaboration with Teesside University, Middlesbrough Museums (Dorman Museum), and Beech Grove Primary School.
               </p>
               <div className="flex flex-wrap gap-4">
-                {/* <button className="btn-primary">
-                  <Download size={20} />
-                  Download Toolkit
-                </button> */}
+                <a href="https://drive.google.com/file/d/1rSR6TFE7VRLTMN4MU2WuUQOmULjpM1Wa/view" target="_blank" rel="noopener noreferrer">
+                  <button className="btn-primary">
+                    <Download size={20} />
+                    Download Toolkit
+                  </button>
+                </a>
                 <button className="btn-secondary" onClick={() => document.getElementById('artefacts-gallery').scrollIntoView({ behavior: 'smooth' })}>
                   <Amphora size={20} />
                   Explore Artefacts
