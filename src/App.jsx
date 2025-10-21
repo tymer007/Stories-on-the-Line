@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Download, MapPin, ChevronDown, ChevronUp, BookOpen, Pencil, Video, Clock, Users, Award } from "lucide-react";
+import { Download, MapPin, ChevronDown, ChevronUp, BookOpen, Pencil, Video, Clock, Users, Award, MessageCircleHeart, Amphora } from "lucide-react";
 
 const App = () => {
   const [expandedCards, setExpandedCards] = useState({});
@@ -382,15 +382,22 @@ const App = () => {
                   Download Toolkit
                 </button> */}
                 <button className="btn-secondary" onClick={() => document.getElementById('artefacts-gallery').scrollIntoView({ behavior: 'smooth' })}>
+                  <Amphora size={20} />
                   Explore Artefacts
                 </button>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScj2rOCmJ3zNzE-DesLmahbGESxoOFXAYDQg3ID5uQcCbhqMg/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">
+                  <button className="btn-primary">
+                    <MessageCircleHeart size={20} />
+                    We Would Love Your Feedback
+                  </button>
+                </a>
               </div>
             </div>
             <div className="relative">
               {/* REPLACE: ww2_telephone.jpg - Main hero image of the WW2 field telephone */}
               {/* Recommended dimensions: 800x1000px, portrait orientation */}
               <div className="bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl p-8 shadow-2xl transform hover:scale-105 transition-transform">
-                <img 
+                <img
                   src="/ww2_phone.png"
                   alt="WW2 Field Telephone - Historic military communication device"
                   className="w-full h-auto rounded-lg shadow-lg"
@@ -444,7 +451,7 @@ const App = () => {
             </div>
             <div>
               {/* Stock image placeholder for classroom/museum scene */}
-              <img 
+              <img
                 src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=600&fit=crop"
                 alt="Children exploring historical artefacts in a museum setting"
                 className="w-full h-auto rounded-lg shadow-xl"
@@ -459,7 +466,7 @@ const App = () => {
         <div className="max-w-6xl mx-auto">
           <h2 className="section-title text-center mb-4">What's Inside the Toolkit?</h2>
           <p className="text-center text-gray-600 mb-12 text-lg">Everything you need to deliver engaging history-literacy lessons</p>
-          
+
           <div className="grid md:grid-cols-3 gap-6">
             {[
               { title: "Teacher Guide", desc: "One-hour training plan with step-by-step instructions", icon: "📚" },
@@ -484,7 +491,7 @@ const App = () => {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-4">Quick Start: 3 Simple Steps</h2>
           <p className="text-center mb-12 text-xl opacity-90">Get started with your class in just three easy stages</p>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 rounded-full bg-yellow-400 text-gray-900 flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
@@ -510,7 +517,7 @@ const App = () => {
         <div className="max-w-6xl mx-auto">
           <h2 className="section-title text-center mb-4">Year 6 Lesson Plans</h2>
           <p className="text-center text-gray-600 mb-12 text-lg">Three ready-to-run lessons aligned with curriculum standards</p>
-          
+
           <div className="space-y-6">
             {lessons.map((lesson, idx) => {
               const Icon = lesson.icon;
@@ -536,7 +543,7 @@ const App = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   {expandedCards[`lesson-${idx}`] && (
                     <div className="mt-6 pl-16 space-y-6 animate-fadeIn">
                       <div>
@@ -576,14 +583,14 @@ const App = () => {
         </div>
       </section>
 
-        {/* Featured Artefact - WW2 Telephone Spotlight */}
-        <section className="py-20 px-6 bg-gradient-to-br from-orange-600 to-yellow-500 text-white relative overflow-hidden">
+      {/* Featured Artefact - WW2 Telephone Spotlight */}
+      <section className="py-20 px-6 bg-gradient-to-br from-orange-600 to-yellow-500 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{ 
+          <div className="absolute inset-0" style={{
             backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.1) 35px, rgba(255,255,255,.1) 70px)'
           }}></div>
         </div>
-        
+
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-8">
             <div className="inline-block bg-white text-orange-600 px-4 py-2 rounded-full text-sm font-bold mb-4">
@@ -594,7 +601,7 @@ const App = () => {
               Voices from the past: Connecting soldiers across the battlefield
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border-2 border-white/30">
@@ -602,7 +609,7 @@ const App = () => {
                 <p className="text-xl mb-6 leading-relaxed">
                   A military field telephone used in WWII for frontline communications. These robust devices allowed soldiers to communicate vital messages across trenches, command posts, and battlefields—even in the harshest conditions.
                 </p>
-                
+
                 <div className="space-y-4 mb-6">
                   <div className="flex items-start gap-3">
                     <div className="w-8 h-8 rounded-full bg-yellow-400 text-gray-900 flex items-center justify-center flex-shrink-0 font-bold">
@@ -632,7 +639,7 @@ const App = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="bg-white/20 rounded-lg p-6 border-l-4 border-yellow-400">
                   <h4 className="font-bold text-xl mb-3 text-yellow-300">💡 Imagine This:</h4>
                   <p className="text-white/90 leading-relaxed">
@@ -641,13 +648,13 @@ const App = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="order-1 md:order-2">
               <div className="relative">
                 {/* REPLACE: ww2_telephone.jpg - Spotlight featured image */}
                 {/* Recommended dimensions: 700x900px, high quality */}
                 <div className="bg-white rounded-2xl p-6 shadow-2xl transform hover:scale-105 transition-transform duration-300">
-                  <img 
+                  <img
                     src="/tel_mk_v.jpg?w=700&h=900&fit=crop"
                     alt="WW2 Military Field Telephone - Close-up showing the handset, crank handle, and metal casing"
                     className="w-full h-auto rounded-lg"
@@ -657,14 +664,14 @@ const App = () => {
                     {/* <div className="text-gray-600 text-sm">Dorman Museum Collection</div> */}
                   </div>
                 </div>
-                
+
                 {/* Decorative elements */}
                 <div className="absolute -top-6 -right-6 w-32 h-32 bg-yellow-400 rounded-full opacity-20 blur-2xl"></div>
                 <div className="absolute -bottom-6 -left-6 w-40 h-40 bg-orange-300 rounded-full opacity-20 blur-2xl"></div>
               </div>
             </div>
           </div>
-          
+
           {/* Classroom Activities Section */}
           <div className="mt-16 grid md:grid-cols-3 gap-6">
             <div className="bg-white text-gray-900 rounded-xl p-6 shadow-lg">
@@ -674,7 +681,7 @@ const App = () => {
                 <strong>Message Home:</strong> Write a short telegram or letter from a soldier using this telephone to call home. What would they say in just 50 words?
               </p>
             </div>
-            
+
             <div className="bg-white text-gray-900 rounded-xl p-6 shadow-lg">
               <div className="text-3xl mb-3">🎭</div>
               <h4 className="font-bold text-xl mb-2" style={{ color: '#D27702' }}>Drama Activity</h4>
@@ -682,7 +689,7 @@ const App = () => {
                 <strong>Role Play:</strong> Work in pairs. One person is at headquarters, the other on the front line. Create a 2-minute conversation using the telephone.
               </p>
             </div>
-            
+
             <div className="bg-white text-gray-900 rounded-xl p-6 shadow-lg">
               <div className="text-3xl mb-3">🎨</div>
               <h4 className="font-bold text-xl mb-2" style={{ color: '#D27702' }}>Art & Design</h4>
@@ -691,7 +698,7 @@ const App = () => {
               </p>
             </div>
           </div>
-          
+
           {/* Teacher's Corner */}
           <div className="mt-12 bg-white/10 backdrop-blur-sm rounded-xl p-8 border-2 border-white/30">
             <h3 className="text-2xl font-bold mb-4 flex items-center gap-3">
@@ -729,7 +736,7 @@ const App = () => {
           <p className="text-center text-lg text-gray-700 mb-12">
             Click the numbered tags to read descriptions and discover classroom activities for each historical object
           </p>
-          
+
           {/* Main Gallery Image with Hotspots */}
           <div className="mb-16 relative">
             <div className="bg-white rounded-xl shadow-2xl p-8">
@@ -737,12 +744,12 @@ const App = () => {
               {/* Or use individual artefact images positioned in a grid */}
               {/* Recommended: Create a 1400x900px composite showing all artefacts with space for numbered overlays */}
               <div className="relative bg-gradient-to-br from-gray-800 to-gray-600 rounded-lg overflow-hidden">
-                <img 
+                <img
                   src="/artefacts.png"
                   alt="WW2 Museum Artefacts Display - Multiple historical items from World War 2"
                   className="w-full h-auto"
                 />
-                
+
                 {/* Interactive Hotspots Overlay */}
                 {/* These positions are examples - adjust based on your actual composite image */}
                 <div className="absolute inset-0">
@@ -770,7 +777,7 @@ const App = () => {
                   ))}
                 </div>
               </div>
-              
+
               {/* <div className="mt-6 text-center">
                 <button className="btn-primary">
                   <Download size={20} />
@@ -783,7 +790,7 @@ const App = () => {
           {/* Artefact Descriptions */}
           <div className="grid md:grid-cols-2 gap-6">
             {artefacts.map(artefact => (
-              <div 
+              <div
                 key={artefact.id}
                 id={`artefact-${artefact.id}`}
                 className={`artefact-card ${selectedArtefact === artefact.id ? 'selected' : ''}`}
@@ -815,7 +822,7 @@ const App = () => {
           <p className="text-lg text-gray-700 mb-8">
             Practical steps for creating short digital stories using accessible tools
           </p>
-          
+
           <div className="grid md:grid-cols-2 gap-8">
             <div className="card">
               <h3 className="text-2xl font-bold mb-4" style={{ color: '#607401' }}>Adobe Express Basics</h3>
@@ -846,7 +853,7 @@ const App = () => {
                 </li>
               </ol>
             </div>
-            
+
             <div className="card">
               <h3 className="text-2xl font-bold mb-4" style={{ color: '#607401' }}>Free Alternatives</h3>
               <div className="space-y-4">
@@ -869,7 +876,7 @@ const App = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="mt-8 card" style={{ backgroundColor: '#FFF9E6' }}>
             <h3 className="text-xl font-bold mb-3">Storyboard Template</h3>
             <p className="mb-4 text-gray-700">Use this simple 6-panel structure to plan your digital story:</p>
@@ -892,7 +899,7 @@ const App = () => {
           <p className="text-lg text-gray-700 mb-8">
             A complete workshop plan to introduce this toolkit to your teaching team
           </p>
-          
+
           <div className="card">
             <div className="space-y-4">
               {[
@@ -913,7 +920,7 @@ const App = () => {
                 </div>
               ))}
             </div>
-            
+
             <div className="mt-6 p-4 bg-yellow-50 border-l-4 border-yellow-400 rounded">
               <strong className="block mb-2">Equipment Checklist:</strong>
               <div className="grid md:grid-cols-2 gap-2 text-sm">
@@ -972,7 +979,7 @@ const App = () => {
           <p className="text-center text-lg text-gray-700 mb-12">
             This toolkit is a collaboration between three organizations passionate about education and heritage
           </p>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             <div className="card text-center">
               <div className="w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center text-3xl" style={{ backgroundColor: '#607401', color: 'white' }}>
@@ -982,18 +989,18 @@ const App = () => {
               <p className="text-gray-600 mb-4">
                 Leading research and innovation in digital education and community engagement across the North East.
               </p>
-              
-              <a 
-                href="https://www.tees.ac.uk/" 
-                target="_blank" 
+
+              <a
+                href="https://www.tees.ac.uk/"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 hover:text-blue-800 flex items-center justify-center gap-2"
               >
                 Visit Website →
               </a>
-              <a 
-                href="https://www.google.com/maps/place/Teesside+University/@54.5706753,-1.2378422,17z/data=!3m1!4b1!4m6!3m5!1s0x487eed10770a3edd:0x28e227d64fd10a0c!8m2!3d54.5706753!4d-1.2352673!16zL20vMDM0NHM4?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D" 
-                target="_blank" 
+              <a
+                href="https://www.google.com/maps/place/Teesside+University/@54.5706753,-1.2378422,17z/data=!3m1!4b1!4m6!3m5!1s0x487eed10770a3edd:0x28e227d64fd10a0c!8m2!3d54.5706753!4d-1.2352673!16zL20vMDM0NHM4?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="mt-2 text-blue-600 hover:text-blue-800 flex items-center justify-center gap-2"
               >
@@ -1001,7 +1008,7 @@ const App = () => {
                 View on Map
               </a>
             </div>
-            
+
             <div className="card text-center">
               <div className="w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center text-3xl" style={{ backgroundColor: '#D27702', color: 'white' }}>
                 🏛️
@@ -1010,17 +1017,17 @@ const App = () => {
               <p className="text-gray-600 mb-4">
                 Middlesbrough's premier museum, showcasing local history, natural sciences, and community heritage.
               </p>
-              <a 
-                href="https://teesvalleymuseums.org/visit/dorman-museum/" 
-                target="_blank" 
+              <a
+                href="https://teesvalleymuseums.org/visit/dorman-museum/"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 hover:text-blue-800 flex items-center justify-center gap-2"
               >
                 Visit Website →
               </a>
-              <a 
-                href="https://www.google.com/maps/place/Dorman+Museum/@54.5640305,-1.2437473,16z/data=!3m1!4b1!4m6!3m5!1s0x487eed1ecc02b24d:0x14ade59456098819!8m2!3d54.5645375!4d-1.2409363!16zL20vMGczbGZo?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D" 
-                target="_blank" 
+              <a
+                href="https://www.google.com/maps/place/Dorman+Museum/@54.5640305,-1.2437473,16z/data=!3m1!4b1!4m6!3m5!1s0x487eed1ecc02b24d:0x14ade59456098819!8m2!3d54.5645375!4d-1.2409363!16zL20vMGczbGZo?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="mt-2 text-blue-600 hover:text-blue-800 flex items-center justify-center gap-2"
               >
@@ -1028,7 +1035,7 @@ const App = () => {
                 View on Map
               </a>
             </div>
-            
+
             <div className="card text-center">
               <div className="w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center text-3xl" style={{ backgroundColor: '#607401', color: 'white' }}>
                 🏫
@@ -1037,17 +1044,17 @@ const App = () => {
               <p className="text-gray-600 mb-4">
                 An outstanding primary school committed to creative learning and community partnerships.
               </p>
-              <a 
-                href="https://www.beechgroveschool.org.uk/" 
-                target="_blank" 
+              <a
+                href="https://www.beechgroveschool.org.uk/"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 hover:text-blue-800 flex items-center justify-center gap-2"
               >
                 Visit Website →
               </a>
-              <a 
-                href="https://www.google.com/maps/place/Beech+Grove+Primary+School/@54.5542192,-1.2296365,18.69z/data=!4m6!3m5!1s0x487eecfeb021e3d7:0x6df787db50517677!8m2!3d54.5545787!4d-1.2258901!16s%2Fg%2F1tmz6hqm?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D" 
-                target="_blank" 
+              <a
+                href="https://www.google.com/maps/place/Beech+Grove+Primary+School/@54.5542192,-1.2296365,18.69z/data=!4m6!3m5!1s0x487eecfeb021e3d7:0x6df787db50517677!8m2!3d54.5545787!4d-1.2258901!16s%2Fg%2F1tmz6hqm?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="mt-2 text-blue-600 hover:text-blue-800 flex items-center justify-center gap-2"
               >
@@ -1069,7 +1076,7 @@ const App = () => {
                 A digital storytelling toolkit bringing WW2 history to life through museum objects and creative literacy.
               </p>
             </div>
-            
+
             <div>
               <h4 className="font-bold mb-3">Quick Links</h4>
               <div className="space-y-2 text-sm">
@@ -1084,7 +1091,7 @@ const App = () => {
                 </a>
               </div>
             </div>
-            
+
             <div>
               <h4 className="font-bold mb-3">Contact & Support</h4>
               <p className="text-sm opacity-80 mb-2">
@@ -1092,7 +1099,7 @@ const App = () => {
               </p>
             </div>
           </div>
-          
+
           <div className="border-t border-gray-700 pt-8 text-center text-sm opacity-80">
             <p className="mb-4">
               Built in collaboration with Teesside University, Middlesbrough Museums (Dorman Museum), and Beech Grove Primary School.
