@@ -465,7 +465,7 @@ const App = () => {
               { title: "Teacher Guide", desc: "One-hour training plan with step-by-step instructions", icon: "📚" },
               { title: "Three Full Lessons", desc: "Ready-to-run Year 6 lessons: reading, writing, and digital storytelling", icon: "✏️" },
               { title: "Storyboard Templates", desc: "Script templates and digital story planning sheets", icon: "🎬" },
-              { title: "Printable Worksheets", desc: "Observation sheets, reflection prompts, and assessment tools", icon: "📝" },
+              // { title: "Printable Worksheets", desc: "Observation sheets, reflection prompts, and assessment tools", icon: "📝" },
               { title: "Artefact Gallery", desc: "Large gallery with numbered hotspots for classroom exploration", icon: "🖼️" },
               { title: "Adobe Tutorials", desc: "Mini-tutorials for Adobe Express and free alternatives", icon: "💻" }
             ].map((item, idx) => (
@@ -654,7 +654,7 @@ const App = () => {
                   />
                   <div className="mt-4 text-center">
                     <div className="text-gray-900 font-bold text-lg">British Field Telephone Mk V</div>
-                    <div className="text-gray-600 text-sm">Dorman Museum Collection</div>
+                    {/* <div className="text-gray-600 text-sm">Dorman Museum Collection</div> */}
                   </div>
                 </div>
                 
